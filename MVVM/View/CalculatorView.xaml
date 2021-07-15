@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="mvvm_example.MVVM.View.CalculatorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewModel="clr-namespace:mvvm_example.MVVM.ViewModel"
+             xmlns:local="clr-namespace:mvvm_example.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <viewModel:CalculatorViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="121" Margin="60,59,0,0" 
+                VerticalAlignment="Top" Width="307" Background="#FF535353" CornerRadius="3"/>
+
+        <Button x:Name="bCalculate" Content="Сложить" HorizontalAlignment="Left" Margin="179,125,0,0"
+                VerticalAlignment="Top" Width="75" Command="{Binding CalculateButton}"/>
+        <TextBox x:Name="tbFirstNum" HorizontalAlignment="Left" Height="23" Margin="78,86,0,0" TextWrapping="Wrap" Text="{Binding FirstNumber}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbSecondBox" HorizontalAlignment="Left" Height="23" Margin="233,86,0,0" TextWrapping="Wrap" Text="{Binding SecondNumber}" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lResult" Content="{Binding Result}" HorizontalAlignment="Left" Margin="78,154,0,0" VerticalAlignment="Top" Width="135"/>
+
+    </Grid>
+</UserControl>
