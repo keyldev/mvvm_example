@@ -11,17 +11,26 @@ namespace mvvm_example.MVVM.ViewModel
     {
         private object _currentView;
 
+        /// <summary>
+        /// CurrentView для смены View в главном окне (MainWindow.xaml)
+        /// </summary>
         public object CurrentView
         {
             get { return _currentView; }
             set { _currentView = value; NotifyPropertyChanged(); }
         }
-        public CalculatorViewModel testViewModel { get; set; }
+        /// <summary>
+        /// Излишнее свойство, можно обойтись без него, можно с ним.
+        /// </summary>
+        public LoginViewModel LoginViewModel { get; set; }
         public MainWindowViewModel()
         {
-            testViewModel = new CalculatorViewModel();
+            // инициализируем
+            LoginViewModel = new LoginViewModel();
 
-            CurrentView = testViewModel;
+            // показываем VM
+            // заглянуть стоит в App.xaml, там указаны DataTemplat'ы для Login\Register View's. 
+            CurrentView = LoginViewModel;
         }
     }
 }

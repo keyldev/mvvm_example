@@ -6,11 +6,15 @@
              xmlns:view="clr-namespace:mvvm_example.MVVM.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <DataTemplate DataType="{x:Type viewModel:TestViewModel}">
-            <view:TestView/>
-        </DataTemplate>
         <DataTemplate DataType="{x:Type viewModel:CalculatorViewModel}">
             <view:CalculatorView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:RegisterViewModel}">
+            <view:RegisterView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:LoginViewModel}">
+            <view:LoginView/>
         </DataTemplate>
     </Application.Resources>
 </Application>

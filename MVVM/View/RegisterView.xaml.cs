@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace mvvm_example.MVVM.View
 {
     /// <summary>
-    /// Логика взаимодействия для TestView.xaml
+    /// Логика взаимодействия для RegisterView.xaml
     /// </summary>
-    public partial class TestView : UserControl
+    public partial class RegisterView : UserControl
     {
-        public TestView()
+        public RegisterView()
         {
             InitializeComponent();
         }
